@@ -46,6 +46,13 @@ export class AppComponent {
     isEmployed: true,
   };
 
+  //09 - Tipps und Tricks (pop() Funktion, if() Abfrage nutzen)
+
+  fruit = "";
+  
+  fruitList: string[] = ['Apple', 'Banana', 'Cherry'];
+
+
   constructor() {
     console.log(this.theString);
     console.log(this.theNumber);
@@ -62,5 +69,17 @@ export class AppComponent {
     //07 - types bei Objekten
 
     this.person.name = 31;
+
+    //09 - Tipps und Tricks (pop() Funktion, if() Abfrage nutzen)
+
+    this.fruit = this.fruitList.pop()!;
+    if (this.fruit) {
+      console.log(`You selected: ${this.fruit}`);
+    } else {
+      console.log('No fruit selected');
+    }
+
+
+
   }
 }
