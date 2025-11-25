@@ -31,9 +31,21 @@ export class AppComponent {
   // 06 - literals und tupels
 
   noteType: 200 | 404 = 404;
-  theArray = [200,404, 'Two', true] as [number, number, string, boolean];
+  theArray = [200, 404, 'Two', true] as [number, number, string, boolean];
 
+  // 07 - types bei Objekten
 
+  person: {
+    readonly name: string | number;
+    age: number;
+    position?: string;
+    isEmployed: boolean;
+  } = {
+    name: 'John Doe',
+    age: 30,
+    position: 'Developer',
+    isEmployed: true,
+  };
 
   constructor() {
     console.log(this.theString);
@@ -48,5 +60,8 @@ export class AppComponent {
     // 06 - literals und tupels
     this.noteType = 200;
 
+    //07 - types bei Objekten
+
+    this.person.age = 31;
   }
 }
