@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Person } from './interfaces/person.interface';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -35,12 +39,7 @@ export class AppComponent {
 
   // 07 - types bei Objekten
 
-  person: {
-    readonly name: string | number;
-    age: number;
-    position?: string;
-    isEmployed: boolean;
-  } = {
+  person: Person = {
     name: 'John Doe',
     age: 30,
     position: 'Developer',
@@ -62,6 +61,6 @@ export class AppComponent {
 
     //07 - types bei Objekten
 
-    this.person.age = 31;
+    this.person.name = 31;
   }
 }
